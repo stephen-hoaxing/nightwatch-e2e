@@ -1,0 +1,27 @@
+{
+  "name": "nightwatch-e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug": "node --inspect-brk node_modules/nightwatch/bin/nightwatch",
+    "test:vrt": "nightwatch -c nightwatch.vrt.conf.js",
+    "consolidate:vrt": "CONSOLIDATE=1 nightwatch -c nightwatch.vrt.conf.js",
+    "test:cucumber": "cucumber-js --require cucumber.conf.js --require step-definitions",
+    "test": "nightwatch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^90.0.0",
+    "cucumber": "^7.0.0-rc.0",
+    "cucumber-pretty": "^6.0.0",
+    "geckodriver": "^1.22.3",
+    "nightwatch": "^1.6.3",
+    "nightwatch-api": "^3.0.2"
+  },
+  "dependencies": {
+    "nightwatch-vrt": "^0.2.10"
+  }
+}
